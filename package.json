@@ -1,0 +1,38 @@
+{
+  "name": "ongikar",
+  "version": "1.0.0",
+  "description": "ongikar api",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavelshahriar/ongikar.git"
+  },
+  "keywords": [
+    "ongikar",
+    "promisekeeperapp"
+  ],
+  "author": "Pavel Shahriar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavelshahriar/ongikar/issues"
+  },
+  "homepage": "https://github.com/pavelshahriar/ongikar#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1",
+    "nodemon": "^1.9.1"
+  }
+}

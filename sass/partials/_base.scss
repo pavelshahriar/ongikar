@@ -1,0 +1,12 @@
+body, div, p {
+  margin: 0;
+  padding: 0;
+  font-family : $base-font-family;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+}
+
+h1, h2, h3, h4 {
+  font-weight: $header-font-weight;
+}
+
