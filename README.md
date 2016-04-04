@@ -1,9 +1,13 @@
-This is the README file of the ongikar api.
+In bengali Ongikar means promise. This api based web app will help the end users keep track of which local market merchant is not keeping its promise by providing promised services to its customers.
 
-Technical specification : 
+## Tech Stack : 
 
 1. Node
 2. Express
-3. Swagger
-4. MongoDB
+3. Handlebars
+4. Sass
+5. Gulp
+6. Swagger
+
+
 
