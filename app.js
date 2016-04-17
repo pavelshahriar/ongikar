@@ -1,21 +1,23 @@
-// set variables for environment
-var express = require('express');
-var path = require('path');
-var exphbs = require('express-handlebars');
-var favicon = require('serve-favicon');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var mongoose = require('mongoose');
+'use strict';
 
-var app = express();
+// set constiables for environment
+const express = require('express');
+const path = require('path');
+const exphbs = require('express-handlebars');
+const favicon = require('serve-favicon');
+const logger = require('morgan');
+const cookieParser = require('cookie-parser');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const app = express();
 
 //----------//
 // DB Setup //
 //----------//
-var dbName = 'ongikar';
+const dbName = 'ongikar';
 mongoose.connect('mongodb://localhost/' + dbName);
-var db = mongoose.connection;
+const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
     console.log('And the promising DB is connected!');
@@ -43,22 +45,29 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //----------------------//
 app.use(cookieParser());
 
+//---------------//
+// Routing Setup //
+//---------------//
+const beBase = './src/';
+app.use('/', require(beBase + 'routes/index'));
+app.use('/api/users', require(beBase + 'routes/users'));
+
 //-------------------------//
 // Static Asset Path Setup //
 //-------------------------//
 app.use(express.static(path.join(__dirname, 'public')));
 
-//---------------//
-// Routing Setup //
-//---------------//
-app.use('/', require('./routes/index'));
-app.use('/api/users', require('./routes/users'));
-
 //------------//
 // View Setup //
 //------------//
-app.set('views', path.join(__dirname, 'views'));
-app.engine('.hbs', exphbs({defaultLayout: 'layout', extname: '.hbs'}));
+var feBase = __dirname + '/app/';
+app.set('views', path.join( feBase + 'views' ));
+app.engine('.hbs', exphbs({
+    defaultLayout: 'layout',
+    extname: '.hbs',
+    layoutsDir: path.join(__dirname + '/app/views/layouts'),
+    partialsDir: path.join(__dirname + '/app/views/partials')
+}));
 app.set('view engine', '.hbs');
 
 //---------------------//
@@ -66,14 +75,14 @@ app.set('view engine', '.hbs');
 //---------------------//
 // catch 404 and forward to error handler
 app.use(function(req,res,next) {
-    var err = new Error('Not Found');
+    const err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
+    app.use(function (err, req, res) {
         res.status(err.status || 500);
         res.render('error', {
             message: err.message,
@@ -82,8 +91,8 @@ if (app.get('env') === 'development') {
     });
 }
 // production error handler
-// no stacktraces leaked to user
-app.use(function (err, req, res, next) {
+// no stack traces leaked to user
+app.use(function (err, req, res) {
     res.status(err.status || 500);
     res.render('error', {
         message: err.message,

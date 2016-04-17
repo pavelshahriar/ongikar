@@ -1,4 +1,4 @@
-In bengali Ongikar means promise. This api based web app will help the end users keep track of which local market merchant is not keeping its promise by providing promised services to its customers.
+In bengali Ongikar means promise. This api based web app will help the create revolutions in bengali community by making people more and more inclined to keeping their promises made !
 
 ## Tech Stack :
 
