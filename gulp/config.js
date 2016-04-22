@@ -15,7 +15,7 @@ module.exports = {
         name: 'ongikar.min.js'
     },
     img: {
-        src: path.src + 'img/**/*.png',
+        src: path.src + 'img/**/*.*',
         dst: path.dst + 'img/'
     }
 };

@@ -8,4 +8,9 @@ router.get('/', function (req, res) {
     res.render('index');
 });
 
+/* GET contact page. */
+router.get('/contact', function (req, res) {
+    res.render('contact');
+});
+
 module.exports = router;
