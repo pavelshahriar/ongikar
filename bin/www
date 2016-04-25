@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 var debug = require('debug')('handle');
 var app = require('../app');
-var port = process.env.PORT || 4000;
 
+require('dotenv').config();
+
+var port = process.env.PORT;
 app.set('port', port);
-
 app.listen(port);
 console.log('You cannot break promises at ' + port + '!');

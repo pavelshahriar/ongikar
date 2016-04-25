@@ -1,5 +1,7 @@
 'use strict';
 
+require('dotenv').config();
+
 // set constiables for environment
 const express = require('express');
 const path = require('path');
@@ -15,13 +17,13 @@ const app = express();
 //----------//
 // DB Setup //
 //----------//
-// const dbName = 'ongikar';
-// mongoose.connect('mongodb://localhost/' + dbName);
-// const db = mongoose.connection;
-// db.on('error', console.error.bind(console, 'connection error:'));
-// db.once('open', function() {
-//     console.log('And the promising DB is connected!');
-// });
+const connectionString = 'mongodb://' + process.env.DB_HOST + ':' + process.env.DB_PORT + '/' + process.env.DB_NAME;
+mongoose.connect(connectionString, {user: process.env.DB_USER, pass: process.env.DB_PASS});
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+    console.log('And the promising DB is connected!');
+});
 
 //---------------//
 // Favicon Setup //
