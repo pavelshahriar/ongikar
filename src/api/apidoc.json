@@ -1,0 +1,9 @@
+{
+    "name": "ongikar API",
+    "version": "0.1.0",
+    "description": "API doc for ongikar app",
+    "apidoc": {
+        "title": "ONGIKAR API",
+        "url" : "https://localhost.com:4000/api"
+    }
+}

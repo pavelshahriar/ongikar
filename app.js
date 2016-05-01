@@ -47,17 +47,21 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //----------------------//
 app.use(cookieParser());
 
-//---------------//
-// Routing Setup //
-//---------------//
-const beBase = './src/';
-app.use('/', require(beBase + 'routes/index'));
-app.use('/api/users', require(beBase + 'routes/users'));
-
 //-------------------------//
 // Static Asset Path Setup //
 //-------------------------//
 app.use(express.static(path.join(__dirname, 'public')));
+// apidoc static page
+app.use('/api', express.static(path.join(__dirname, 'public/api/doc')));
+
+//---------------//
+// Routing Setup //
+//---------------//
+const beBase = './src/';
+// web routes
+app.use('/', require(beBase + 'routes/index'));
+// api routes
+app.use('/api/users', require(beBase + 'api/users'));
 
 //------------//
 // View Setup //

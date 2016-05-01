@@ -5,7 +5,7 @@
   "env": {
   },
   "formation": {
-    "web": {
+      "web": {
       "quantity": 1
     }
   },
