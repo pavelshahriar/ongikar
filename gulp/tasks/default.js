@@ -9,6 +9,7 @@ gulp.task('default',
         'sass', 
         'js', 
         'img',
+        'apidoc',
         'watch'
     ]
 );

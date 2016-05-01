@@ -17,5 +17,9 @@ module.exports = {
     img: {
         src: path.src + 'img/**/*.*',
         dst: path.dst + 'img/'
+    },
+    apidoc: {
+        src: 'src/api/',
+        dst: path.dst + '/api/doc'
     }
 };
