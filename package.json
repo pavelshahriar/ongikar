@@ -42,7 +42,7 @@
     "mongoose": "^4.4.12",
     "morgan": "^1.7.0",
     "nodemon": "^1.9.2",
-    "require-dir": "^0.3.0"
+    "require-dir": "^0.3.0",
     "serve-favicon": "^2.3.0"
   },
   "devDependencies": {
