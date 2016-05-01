@@ -5,8 +5,8 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./bin/www",
-    "gulp" : "gulp"
+    "start": "node ./bin/www",
+    "postinstall": "gulp default"
   },
   "repository": {
     "type": "git",
