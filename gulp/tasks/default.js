@@ -11,5 +11,8 @@ gulp.task('default',
         'img',
         'apidoc',
         'watch'
-    ]
+    ],
+    () => {
+        process.exit(0);
+    }
 );
