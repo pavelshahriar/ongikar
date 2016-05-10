@@ -99,6 +99,13 @@ router.get(
                 if(err){
                     res.send(err);
                 }
+                else if(user.length == 0){
+                    let out = {
+                        success: false,
+                        msg: "Resource Unavailable"
+                    };
+                    res.status(404).send(out);
+                }
                 else{
                     let out = {
                         success: true,
@@ -197,7 +204,7 @@ router.put(
      *     }
      *
      * @apiSuccessExample Success-Response:
-     *     HTTP/1.1 204 NO CONTENT
+     *     HTTP/1.1 200 OK
      *     {
      *          success: true
      *     }
@@ -221,7 +228,7 @@ router.put(
                     let out = {
                         success: true
                     };
-                    res.status(204).send(out);
+                    res.status(200).send(out);
                 }
             }
         );
@@ -250,9 +257,6 @@ router.delete(
      *
      * @apiSuccessExample Success-Response:
      *     HTTP/1.1 204 NO CONTENT
-     *     {
-     *          success: true
-     *     }
      ***/
     (req, res) => {
         User.findOneAndRemove(
