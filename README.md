@@ -3,15 +3,20 @@ In bengali Ongikar means promise. This api based web app will help the create re
 ## Tech Stack :
 
 ### Integrated
+* PaaS : Heroku
 * Server : Node.js
 * Middleware : ExpressJS
 * DB : MongoDB
 * UX : Sass
 * Build : Gulp
+* Documentation : ApiDoc
+* Test :
+   * Integration : Postman + Newman
 
 ### Pending
+* _Transpiler :_
 * _Client :_
-* _Test :_
+* _Unit Test :_
 * _Coverage :_
 
 

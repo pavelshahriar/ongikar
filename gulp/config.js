@@ -21,5 +21,9 @@ module.exports = {
     apidoc: {
         src: 'src/api/',
         dst: path.dst + '/api/doc'
+    },
+    newman: {
+        path: 'src/tests/postman/',
+        api: ['Users']
     }
 };

@@ -1,0 +1,17 @@
+{
+	"id": "fcc6031e-09a8-ab67-4a68-76b0b7a6c343",
+	"name": "local",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://localhost:4000/api",
+			"type": "text",
+			"enabled": true
+		}
+	],
+	"team": null,
+	"timestamp": 1462858240452,
+	"synced": false,
+	"syncedFilename": "",
+	"isDeleted": false
+}

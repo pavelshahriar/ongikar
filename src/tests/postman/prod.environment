@@ -1,0 +1,17 @@
+{
+	"id": "c81c6f91-c2f2-dcce-4239-c406a548a8b5",
+	"name": "prod",
+	"values": [
+		{
+			"key": "url",
+			"value": "http://www.ongikar.com/api",
+			"type": "text",
+			"enabled": true
+		}
+	],
+	"team": null,
+	"timestamp": 1462858240441,
+	"synced": false,
+	"syncedFilename": "",
+	"isDeleted": false
+}
