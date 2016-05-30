@@ -62,6 +62,7 @@ const beBase = './src/';
 app.use('/', require(beBase + 'routes/index'));
 // api routes
 app.use('/api/users', require(beBase + 'api/users'));
+app.use('/api/promises', require(beBase + 'api/promises'));
 
 //------------//
 // View Setup //
