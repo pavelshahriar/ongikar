@@ -14,8 +14,8 @@ router.get(
      * @apiVersion 0.1.0
      *
      * @apiSuccess {String} _id Id of the User.
-     * @apiSuccess {String} created_at User creation datetime.
-     * @apiSuccess {String} updated_at User update datetime.
+     * @apiSuccess {String} created User creation datetime.
+     * @apiSuccess {String} updated User update datetime.
      * @apiSuccess {String} username User name.
      * @apiSuccess {String} email User email.
      *
@@ -28,8 +28,8 @@ router.get(
      *              [
      *                  {
      *                      _id : "571f2bb37cff2103008ded7c",
-     *                      created_at: "2016-04-26T08:49:55.990Z",
-     *                      updated_at: "2016-04-26T08:49:55.990Z",
+     *                      created: "2016-04-26T08:49:55.990Z",
+     *                      updated: "2016-04-26T08:49:55.990Z",
      *                      username: "xxx",
      *                      email: "yyy@zzz.com"
      *                  }
@@ -40,7 +40,7 @@ router.get(
     (req, res) => {
         User.find(
             {},
-            {username: 1, email: 1, created_at: 1, updated_at: 1},
+            {username: 1, email: 1, created: 1, updated: 1},
             (err, users) => {
                 if(err){
                     res.send(err);
@@ -69,8 +69,8 @@ router.get(
      * @apiParam {String} username Users unique username.
      *
      * @apiSuccess {String} _id Id of the User.
-     * @apiSuccess {String} created_at User creation datetime.
-     * @apiSuccess {String} updated_at User update datetime.
+     * @apiSuccess {String} created User creation datetime.
+     * @apiSuccess {String} updated User update datetime.
      * @apiSuccess {String} username User name.
      * @apiSuccess {String} email User email.
      *
@@ -83,8 +83,8 @@ router.get(
      *              [
      *                  {
      *                      _id : "571f2bb37cff2103008ded7c",
-     *                      created_at: "2016-04-26T08:49:55.990Z",
-     *                      updated_at: "2016-04-26T08:49:55.990Z",
+     *                      created: "2016-04-26T08:49:55.990Z",
+     *                      updated: "2016-04-26T08:49:55.990Z",
      *                      username: "xxx",
      *                      email: "yyy@zzz.com"
      *                  }
@@ -94,7 +94,7 @@ router.get(
     (req, res) => {
         User.find(
             {username : req.params.username},
-            {username: 1, email: 1, created_at: 1, updated_at: 1},
+            {username: 1, email: 1, created: 1, updated: 1},
             (err, user) => {
                 if(err){
                     res.send(err);
@@ -133,8 +133,8 @@ router.post(
      * @apiParam {String} email Mandatory email of the new user.
      *
      * @apiSuccess {String} _id Id of the new user.
-     * @apiSuccess {String} created_at New User creation datetime.
-     * @apiSuccess {String} updated_at New User update datetime.
+     * @apiSuccess {String} created New User creation datetime.
+     * @apiSuccess {String} updated New User update datetime.
      * @apiSuccess {String} username New User name.
      * @apiSuccess {String} email New User email.
      *
@@ -145,8 +145,8 @@ router.post(
      *          data :
      *              {
      *                  _id: "571f2bb37cff2103008ded7c",
-     *                  created_at: "2016-04-26T08:49:55.990Z",
-     *                  updated_at: "2016-04-26T08:49:55.990Z",
+     *                  created: "2016-04-26T08:49:55.990Z",
+     *                  updated: "2016-04-26T08:49:55.990Z",
      *                  username: "xxx",
      *                  email: "yyy@zzz.com",
      *              }
@@ -164,8 +164,8 @@ router.post(
                         success: true,
                         data: {
                             _id: user._id,
-                            created_at: user.created_at,
-                            updated_at: user.updated_at,
+                            created: user.created,
+                            updated: user.updated,
                             username: user.username,
                             email: user.email
                         }
