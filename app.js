@@ -1,6 +1,6 @@
 'use strict';
 
-require('dotenv').config();
+require('dotenv').config({path: '../.env'});
 
 // set constiables for environment
 const express = require('express');

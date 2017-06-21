@@ -7,6 +7,36 @@ const Promise = require('../models/promise');
 // GET /promises
 router.get(
     '/',
+    /**
+     * @api {get} /promises GET /promises
+     * @apiName GetPromises
+     * @apiGroup Promises
+     * @apiVersion 0.1.0
+     *
+     * @apiSuccess {String} _id Id of the User.
+     * @apiSuccess {String} created User creation datetime.
+     * @apiSuccess {String} updated User update datetime.
+     * @apiSuccess {String} username User name.
+     * @apiSuccess {String} email User email.
+     *
+     * @apiSuccessExample Success-Response:
+     *      HTTP/1.1 200 OK
+     *
+     *      {
+     *          success: true,
+     *          data :
+     *              [
+     *                  {
+     *                      _id : "571f2bb37cff2103008ded7c",
+     *                      created: "2016-04-26T08:49:55.990Z",
+     *                      updated: "2016-04-26T08:49:55.990Z",
+     *                      username: "xxx",
+     *                      email: "yyy@zzz.com"
+     *                  }
+     *             ]
+     *      }
+     *
+     **/
     (req, res) => {
 
         let filters = {status: {'$ne':0 }};
