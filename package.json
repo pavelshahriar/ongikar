@@ -2,8 +2,8 @@
   "name": "ongikar",
   "version": "1.0.0",
   "engines": {
-    "node": "5.10.1",
-    "npm": "3.8.3"
+    "node": "8.1.2",
+    "npm": "5.0.3"
   },
   "description": "ongikar - because promises are meant to be kept",
   "private": true,
