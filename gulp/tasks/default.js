@@ -10,7 +10,7 @@ gulp.task('default',
         'js', 
         'img',
         'apidoc',
-        'newman',
+        //'newman',
         'watch'
     ],
     () => {
