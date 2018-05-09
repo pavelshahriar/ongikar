@@ -52,6 +52,7 @@
     "serve-favicon": "^2.4.3"
   },
   "devDependencies": {
+    "hoek": "^5.0.3",
     "nodemon": "^1.11.0"
   }
 }
