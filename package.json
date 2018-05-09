@@ -10,8 +10,7 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon ./bin/www",
-    "build": "node node_modules/gulp/bin/gulp",
-    "postinstall": "node node_modules/gulp/bin/gulp"
+    "build": "node node_modules/gulp/bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -32,24 +31,24 @@
     "apidoc": "^0.17.6",
     "body-parser": "^1.17.2",
     "cookie-parser": "^1.4.3",
-    "dotenv": "^4.0.0",
+    "dotenv": "^5.0.1",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-apidoc": "^0.2.6",
-    "gulp-clean": "^0.3.2",
+    "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.0.0",
-    "gulp-imagemin": "^3.3.0",
+    "gulp-imagemin": "^4.1.0",
     "gulp-jshint": "^2.0.4",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^4.0.1",
     "gulp-uglify": "^3.0.0",
     "jshint": "^2.9.4",
-    "mongoose": "^4.10.7",
+    "mongoose": "^5.0.17",
     "morgan": "^1.8.2",
     "newman": "^3.7.0",
-    "require-dir": "^0.3.2",
+    "require-dir": "^1.0.0",
     "serve-favicon": "^2.4.3"
   },
   "devDependencies": {

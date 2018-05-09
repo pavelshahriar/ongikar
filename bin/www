@@ -2,7 +2,7 @@
 var debug = require('debug')('handle');
 var app = require('../app');
 
-require('dotenv').config({path: '../.env'});
+require('dotenv').config({path: '.env'});
 
 var port = process.env.PORT;
 app.set('port', port);
